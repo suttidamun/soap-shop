@@ -1,0 +1,24 @@
+{
+  "brand": "Toothgate",
+  "currency": "THB",
+  "products": [
+    {
+      "id": "toothgate-spearmint-70ml",
+      "name": "Toothgate Spearmint",
+      "taste": "spearmint",
+      "size": "70ml",
+      "price": 129,
+      "image": "images/spearmint.jpg",
+      "description": "กลิ่นมิ้นต์สดชื่น ให้ความรู้สึกเย็นและสะอาดหลังแปรงฟันทุกครั้ง"
+    },
+    {
+      "id": "toothgate-salt-70ml",
+      "name": "Toothgate Salt",
+      "taste": "salt",
+      "size": "70ml",
+      "price": 129,
+      "image": "images/salt.jpg",
+      "description": "สูตรเกลือที่เรียบง่ายและอ่อนโยน ให้ความรู้สึกสะอาดกระจ่างโดยไม่ฉุน"
+    }
+  ]
+}

@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Noto+Sans+Thai:wght@300;400;500&family=Noto+Serif+Thai:wght@300;400;500&display=swap");
+
+/* ============================================================
+   Toothgate — Premium Minimal Theme
+   ============================================================ */
+
+:root {
+  /* Base palette: white / cream / dark beige */
+  --color-bg: #faf8f4;
+  --color-surface: #ffffff;
+  --color-cream: #f3ede3;
+  --color-beige: #d8cbb6;
+  --color-text: #2e2a25;
+  --color-text-soft: #6f655a;
+  --color-border: #c9bba5;
+
+  /* Accent: soft gold / bronze */
+  --color-accent: #a88b5e;
+  --color-accent-soft: #c9b08a;
+
+  /* Taste dots only (never full-card backgrounds) */
+  --taste-spearmint: #a8cbb8;
+  --taste-salt: #c4c7c9;
+
+  /* Typography */
+  --font-serif: "Cormorant Garamond", "Noto Serif Thai", Georgia, serif;
+  --font-body: "Noto Sans Thai", "Helvetica Neue", Arial, sans-serif;
+
+  /* Spacing scale (generous) */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 6rem;
+
+  --radius: 2px;
+  --line: 1px solid var(--color-border);
+  --transition: 0.35s ease;
+}
+
+/* ---------- Base ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.9;
+  letter-spacing: 0.02em;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+a:hover {
+  color: var(--color-accent);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  line-height: 1.3;
+  margin: 0 0 var(--space-sm);
+  letter-spacing: 0.04em;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 400;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p {
+  margin: 0 0 var(--space-sm);
+  color: var(--color-text-soft);
+}
+
+/* ---------- Layout ---------- */
+
+.container {
+  width: min(1120px, 100% - 2 * var(--space-md));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--space-xl);
+}
+
+.section--cream {
+  background: var(--color-cream);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+
+.eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  margin-bottom: var(--space-sm);
+}
+
+.divider {
+  width: 48px;
+  height: 1px;
+  margin: var(--space-md) auto;
+  background: var(--color-accent-soft);
+  border: 0;
+}
+
+/* ---------- Header / Navigation ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(250, 248, 244, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: var(--line);
+}
+
+.site-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+}
+
+.logo {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  letter-spacing: 0.12em;
+  color: var(--color-text);
+}
+
+.nav {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.nav a {
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+}
+
+/* ---------- Buttons ---------- */
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 2.4rem;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text);
+  background: transparent;
+  border: var(--line);
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition:
+    border-color var(--transition),
+    color var(--transition),
+    background var(--transition);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  outline: none;
+}
+
+.btn--solid {
+  background: var(--color-text);
+  border-color: var(--color-text);
+  color: var(--color-surface);
+}
+
+.btn--solid:hover,
+.btn--solid:focus-visible {
+  background: transparent;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding-block: var(--space-xl) calc(var(--space-xl) * 0.8);
+  text-align: center;
+}
+
+.hero p {
+  max-width: 36rem;
+  margin-inline: auto;
+  margin-bottom: var(--space-lg);
+}
+
+/* ---------- Product Grid & Card ---------- */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-lg) var(--space-md);
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-surface);
+  border: var(--line);
+  border-radius: var(--radius);
+  padding: var(--space-md);
+  transition: border-color var(--transition);
+}
+
+.product-card:hover {
+  border-color: var(--color-accent-soft);
+}
+
+.product-card__media {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+  background: var(--color-cream);
+}
+
+.product-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.product-card:hover .product-card__media img {
+  transform: scale(1.03);
+}
+
+.product-card__taste {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: var(--space-xs);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-text-soft);
+}
+
+/* Small taste dot only — no full-card color */
+.taste-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+}
+
+.taste-dot--spearmint {
+  background: var(--taste-spearmint);
+}
+
+.taste-dot--salt {
+  background: var(--taste-salt);
+}
+
+.product-card__name {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  margin-bottom: var(--space-xs);
+}
+
+.product-card__desc {
+  font-size: 0.95rem;
+  margin-bottom: var(--space-md);
+  flex-grow: 1;
+}
+
+.product-card__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--space-sm);
+  border-top: var(--line);
+  margin-bottom: var(--space-sm);
+}
+
+.product-card__size {
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+}
+
+.product-card__price {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  color: var(--color-text);
+}
+
+.product-card__price span {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  margin-left: 0.2rem;
+  color: var(--color-text-soft);
+}
+
+.product-card .btn {
+  width: 100%;
+  text-align: center;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  padding-block: var(--space-lg);
+  border-top: var(--line);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+}
+
+.site-footer .logo {
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+
+/* ---------- Utilities ---------- */
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+:focus-visible {
+  outline: 1px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 960px) {
+  :root {
+    --space-xl: 4.5rem;
+    --space-lg: 3rem;
+  }
+}
+
+@media (max-width: 720px) {
+  :root {
+    --space-xl: 3.5rem;
+    --space-lg: 2.5rem;
+    --space-md: 1.5rem;
+  }
+
+  body {
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+
+  .site-header .container {
+    min-height: 60px;
+  }
+
+  .nav {
+    gap: var(--space-sm);
+  }
+
+  .nav a {
+    font-size: 0.8rem;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .btn {
+    padding: 0.8rem 1.8rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav {
+    gap: var(--space-xs);
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
